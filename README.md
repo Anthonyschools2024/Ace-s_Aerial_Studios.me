@@ -1,5 +1,6 @@
 In this project we will be building w website from scratch that handles evryday operations
-of the business that I, Anthony Tyler Kimble is building. 
+of the business that I, Anthony Tyler Kimble and his TEAM  is building together for Ace's Aerial Studio's. Hopefully
+an leadind media platform here in tulsa soon. 
 
 A few Functions as follows:
 Home page- the Home page takes is main page of the website that the user will see when first 
