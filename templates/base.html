@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ace's Aerial Studios{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/overlay.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}"> 
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/darklogo.png') }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
+
+    <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+</head>
+<body style="background-image: url('static/images/darktulsa.jpg');" class="bg">
+    <header class="site-header"> 
+        <div class="container">
+            <div class="logo">
+                <img src="static/images/darklogo.png">
+            </div>
+            <nav class="nav-links"> 
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('submissions') }}">Submissions</a></li>
+                    <li><a href="{{ url_for('map') }}">Map</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li> 
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Ace's Aerial Studio's. All rights reserved.</p>
+    </footer>
+</body>
+</html>

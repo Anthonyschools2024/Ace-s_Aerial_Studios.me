@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="flash-messages">
+  {% for category, message in messages %}
+  <div class="alert {{ category }}">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+<h1>About Us</h1>
+<div>
+  <h2>Capture the Extraordinary</h2>
+  <ul>
+    <li>At Ace's Aerial Studios, our state-of-the-art equipment and skilled pilots aim to capture breathtaking aerial
+      photography and videography.</li>
+    <li>From stunning aerial views to detailed ground level shots, we'll help you preserve your special moments forever.
+    </li>
+    <li>
+      We strive for greatness, regardless of the scenario or compilcations.
+    </li>
+  </ul>
+  <p>Our Services</p>
+  <ul>
+    <li>Weddings: Capture your unforgettable moment, but from above.</li>
+    <li>Real Estate: Provide potential clients with stunning property media.</li>
+    <li>Travel: Ensure the memories from your getaway last forever.</li>
+  </ul>
+  <p>
+    Established in Tulsa, Oklahoma, we travel to a wide variety of locations.
+  </p>
+  <p>
+    High Quality Photography and Videography.
+  </p>
+  <p>
+    Be sure to include a potential location in the description of your submission.
+  </p>
+</div>
+{% endblock %}

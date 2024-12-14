@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="flash-messages">
+  {% for category, message in messages %}
+  <div class="alert {{ category }}">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+<h1>Contact Us</h1>
+<h2>For general inquiries.</h2>
+<a href="/submissions">
+  <button class="quote-redirect">For a quote, click here.</button>
+</a>
+<form method="post">
+  <label for="name">Name / Business:</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <label for="message">Description:</label>
+  <input type="description" id="description" required>
+  <button class="submit" type="submit">Send</button>
+</form>
+</a>
+{% endblock %}
